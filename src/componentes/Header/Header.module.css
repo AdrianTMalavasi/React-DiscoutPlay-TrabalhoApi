@@ -1,0 +1,44 @@
+header {
+    height: 140px;    
+    width: 100vw;
+    background-color: #015a9f;
+    /*border: 1px solid #5e5e5e;*/
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Alinha a logo e o título verticalmente no centro */
+}
+
+.header-logo img {
+    width: 130px; /* Ajuste a largura da logo conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+     /* Define uma altura máxima opcional para garantir que a logo não fique muito alta */
+}
+
+.header-titulo {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.header-titulo p {
+    color: white ;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+.header-link {
+    color: white;
+    display: flex;
+    text-decoration: none;
+}
+

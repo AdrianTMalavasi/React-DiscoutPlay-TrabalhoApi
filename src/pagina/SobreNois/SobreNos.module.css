@@ -1,0 +1,34 @@
+.sobreNos {
+    padding: 20px;
+  }
+  
+  .intro {
+    display: flex;
+    flex-direction:column;
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+    letter-spacing: 0.5px; /* Ajusta o espaçamento entre letras */
+  }
+  
+  .carrossel {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .carrosselItem img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+
+  .slick-dots {
+    bottom: -30px; /* Ajusta a posição dos pontos de navegação */
+  }
+  
+  .slick-prev, .slick-next {
+    display: none; /* Remove os botões de navegação */
+  }
+  

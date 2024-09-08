@@ -1,0 +1,44 @@
+nav {
+    display: flex;
+    justify-content: center; /* Alinha os itens no centro horizontalmente */
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 0 10px; /* Ajusta o espaçamento entre os botões */
+}
+
+.link, .linkAtivo {
+    text-decoration: none;
+    color: white; /* Cor do texto */
+    font-size: 22px;
+    padding: 10px 15px; /* Espaçamento interno */
+    position: relative;
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.linkAtivo {
+    color: #f70171; /* Cor do texto quando ativo */
+}
+
+.linkAtivo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Espessura da borda inferior */
+    background-color: #f70171; /* Cor da borda inferior */
+    border-radius: 2px;
+}
+
+.link:hover {
+    color: #F00; /* Cor do texto ao passar o mouse */
+}

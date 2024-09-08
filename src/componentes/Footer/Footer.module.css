@@ -1,0 +1,35 @@
+/* Footer.module.css */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.footerContent {
+    margin-bottom: 10px;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialLinks a {
+    padding-top: 10px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.socialLinks a:hover {
+    color: #ddd;
+}
+
+.footerBottom {
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 14px;
+}

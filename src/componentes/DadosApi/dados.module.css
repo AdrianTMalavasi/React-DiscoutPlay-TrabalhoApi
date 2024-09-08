@@ -1,0 +1,9 @@
+.h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white !important;
+    padding-top: 30px;
+
+}

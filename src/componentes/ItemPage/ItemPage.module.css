@@ -1,0 +1,115 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #b7b7b7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.details {
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.rating, .normalPrice, .salePrice, .releaseDate, .platforms, .steamRating {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.discountButton {
+    background-color: #56d437;
+    color: #fff;
+    padding: 10px ;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.offerLink {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.offerLink:hover {
+    background-color: #0056b3;
+}
+
+.backButton {
+    display: inline-block;
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.backButton:hover {
+    background-color: #d32f2f;
+}
+.steamRating {
+    font-size: 1em;
+    color: white;
+}
+
+@media (min-width: 600px) {
+    .item {
+        flex-direction: row;
+    }
+
+    .imageContainer {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .details {
+        flex: 2;
+        text-align: left;
+    }
+}
