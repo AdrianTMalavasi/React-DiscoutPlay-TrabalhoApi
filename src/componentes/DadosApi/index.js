@@ -28,7 +28,7 @@ function GameDeals(props) {
   // Função para aplicar os filtros e a pesquisa
   const applyFilters = () => {
     let updatedDeals = [...props.deals];
-    
+
     // Filtra com base na pesquisa
     if (searchQuery) {
       updatedDeals = updatedDeals.filter(item =>

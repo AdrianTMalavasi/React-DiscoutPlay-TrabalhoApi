@@ -3,7 +3,7 @@ import estilos from './Item.module.css';
 
 function Item(props) {
     const navigate = useNavigate();
-    
+
 
     // Adicionar uma condição para imagens pequenas
     const isSmallImage = props.deal.thumbWidth < 150 || props.deal.thumbHeight < 100;
@@ -20,7 +20,7 @@ function Item(props) {
                             className={isSmallImage ? `${estilos.image} ${estilos.smallImage}` : estilos.image}
                         />
                         {discountPercentage > 0 && (
-                            <div className={estilos.discountButton}>Promoção de 
+                            <div className={estilos.discountButton}>Promoção de
                                 -{discountPercentage}%
                             </div>
                         )}

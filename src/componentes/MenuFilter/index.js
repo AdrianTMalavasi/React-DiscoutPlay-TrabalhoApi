@@ -15,16 +15,16 @@ function MenuFilter({ onFilterChange, onSearchChange }) {
       <div className={estilos.buttonContainer}>
         {/* Botão para listar todos */}
         <button className={estilos.button} onClick={() => onFilterChange('all')}>Listar Todos</button>
-        
+
         {/* Botão para ordenar por ordem alfabética */}
         <button className={estilos.button} onClick={() => onFilterChange('alphabetical')}>Ordem Alfabética</button>
-        
+
         {/* Botão para ordenar por menor preço */}
         <button className={estilos.button} onClick={() => onFilterChange('lowest')}>Menor Preço</button>
-        
+
         {/* Botão para ordenar por maior preço */}
         <button className={estilos.button} onClick={() => onFilterChange('highest')}>Maior Preço</button>
-        
+
         {/* Botão para exibir apenas promoções */}
         <button className={estilos.button} onClick={() => onFilterChange('promo')}>Promoções</button>
       </div>

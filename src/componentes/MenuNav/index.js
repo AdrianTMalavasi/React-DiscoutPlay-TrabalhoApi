@@ -3,7 +3,7 @@ import estilos from './MenuNav.module.css';
 
 function MenuNav() {
     const localizacao = useLocation();
-    
+
     return (
         <nav>
             <ul>

@@ -1,44 +1,80 @@
 header {
-    height: 140px;    
+    height: 140px;
     width: 100vw;
     background-color: #015a9f;
-    /*border: 1px solid #5e5e5e;*/
-
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
     align-items: center;
+    flex-wrap: wrap;
+    /* Permite que os itens se ajustem em telas menores */
 }
 
 .header-logo {
     display: flex;
     gap: 20px;
-    align-items: center; /* Alinha a logo e o título verticalmente no centro */
+    align-items: center;
 }
 
 .header-logo img {
-    width: 130px; /* Ajuste a largura da logo conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-     /* Define uma altura máxima opcional para garantir que a logo não fique muito alta */
+    width: 130px;
+    height: auto;
 }
 
 .header-titulo {
     color: white;
     display: flex;
     flex-direction: row;
-    
 }
 
 .header-titulo p {
-    color: white ;
+    color: white;
     font-size: 28px;
     text-decoration: none;
     font-weight: 700;
-
 }
+
 .header-link {
     color: white;
     display: flex;
     text-decoration: none;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        /* Alinha o conteúdo verticalmente em telas menores */
+        align-items: center;
+    }
+
+    .header-logo {
+        flex-direction: column;
+        /* Coloca a logo e o título em coluna para caber em telas menores */
+        gap: 10px;
+    }
+
+    .header-titulo p {
+        font-size: 24px;
+        /* Diminui o tamanho da fonte em telas menores */
+    }
+
+    .header-logo img {
+        width: 100px;
+        /* Ajusta o tamanho da logo em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-titulo p {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+
+    .header-logo img {
+        width: 80px;
+        /* Logo menor para telas pequenas */
+    }
+}

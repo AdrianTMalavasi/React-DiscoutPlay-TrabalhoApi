@@ -37,7 +37,12 @@
     margin-bottom: 10px;
 }
 
-.rating, .normalPrice, .salePrice, .releaseDate, .platforms, .steamRating {
+.rating,
+.normalPrice,
+.salePrice,
+.releaseDate,
+.platforms,
+.steamRating {
     font-size: 1.2em;
     margin: 5px 0;
 }
@@ -45,7 +50,7 @@
 .discountButton {
     background-color: #56d437;
     color: #fff;
-    padding: 10px ;
+    padding: 10px;
     text-align: center;
     cursor: pointer;
     border-radius: 50px;
@@ -60,6 +65,7 @@
     width: 100%;
     margin-top: 20px;
 }
+
 .offerLink {
     display: inline-block;
     background-color: #007bff;
@@ -93,6 +99,7 @@
 .backButton:hover {
     background-color: #d32f2f;
 }
+
 .steamRating {
     font-size: 1em;
     color: white;

@@ -1,6 +1,5 @@
 import Footer from './componentes/Footer';
 import Header from './componentes/Header';
-import MenuNav from './componentes/MenuNav';
 import Principal from './componentes/Principal';
 import estilos from './App.module.css'
 //import ListagemItens from './componentes/ListagemItens';
@@ -9,7 +8,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemPage from './componentes/ItemPage';
 import NaoEncontrada from './pagina/NaoEncontrada';
 import { useState } from 'react';
-import ListagemItens from './componentes/ListagemItens';
 import GameDeals from './componentes/DadosApi';
 import SobreNos from './pagina/SobreNois';
 // npm install react-slick slick-carousel

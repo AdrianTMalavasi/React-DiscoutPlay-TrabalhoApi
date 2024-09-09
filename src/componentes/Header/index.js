@@ -8,20 +8,20 @@ function Header() {
 
     return (
         <header>
-        <div className={estilos["header-logo"]}>
-            <img src="/images/logo2.png" alt="Logo do Projeto"/>
-            <div className={estilos["header-titulo"]}>
-                <Link to="/" className={estilos["header-link"]} >
+            <div className={estilos["header-logo"]}>
+                <img src="/images/logo2.png" alt="Logo do Projeto" />
+                <div className={estilos["header-titulo"]}>
+                    <Link to="/" className={estilos["header-link"]} >
                         <p>DISCOUNT</p>
-                        <p style={{color: '#fc0170',marginLeft: '5px'}}>PLAY</p>
-                </Link>
+                        <p style={{ color: '#fc0170', marginLeft: '5px' }}>PLAY</p>
+                    </Link>
+                </div>
             </div>
-        </div>
-        <div>
-        <MenuNav/>      
+            <div>
+                <MenuNav />
 
-        </div>       
-    
+            </div>
+
         </header>
     )
 }
