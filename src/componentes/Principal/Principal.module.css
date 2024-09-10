@@ -1,9 +1,7 @@
 main {
     flex-grow: 1;
     background-color: black !important;
-    display: flex;
-    align-items: center;    
-    
+    display: flex;   
 }
 
 .container {
