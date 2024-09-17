@@ -5,6 +5,7 @@ import estilos from './dados.module.css';
 
 function GameDeals(props) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [previousDeals, setPreviousDeals] = useState([]); // Guardar o estado anterior das promoções
 
   useEffect(() => {
     fetchDeals();
@@ -14,14 +15,50 @@ function GameDeals(props) {
     applyFilters();
   }, [props.filterType, props.deals, searchQuery]); // Reaplica o filtro sempre que o tipo, os dados ou a consulta de pesquisa mudarem
 
+  // Solicita permissão para enviar notificações quando o componente for carregado
+  useEffect(() => {
+    if (Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+  }, []);
+
   const fetchDeals = async () => {
     try {
       const response = await fetch('https://www.cheapshark.com/api/1.0/deals');
       const data = await response.json();
+
+      // Comparar as novas promoções com as antigas
+      if (previousDeals.length > 0) {
+        const newDeals = data.filter(game => !previousDeals.some(prevGame => prevGame.dealID === game.dealID));
+        if (newDeals.length > 0) {
+          // Mostrar notificação para novos jogos em promoção
+          notifyUser(newDeals);
+        }
+      }
+
+      setPreviousDeals(props.deals); // Atualiza as promoções anteriores com as atuais
       props.setDeals(data);
       props.setFilteredDeals(data); // Inicialmente exibe todos os dados
     } catch (error) {
       console.error('Erro ao buscar dados da API:', error);
+    }
+  };
+
+  // Função para notificar o usuário
+  const notifyUser = (newDeals) => {
+    if (Notification.permission === 'granted') {
+      newDeals.forEach(game => {
+        new Notification('Novo jogo em promoção!', {
+          body: `${game.title} está em promoção por $${game.salePrice}`,
+          icon: game.thumb
+        });
+      });
+    } else if (Notification.permission !== 'denied') {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          notifyUser(newDeals); // Tenta novamente
+        }
+      });
     }
   };
 
