@@ -48,8 +48,8 @@ function GameDeals(props) {
   const notifyUser = (newDeals) => {
     if (Notification.permission === 'granted') {
       newDeals.forEach(game => {
-        new Notification('Novo jogo em promoção!', {
-          body: `${game.title} está em promoção por $${game.salePrice}`,
+        new Notification('🔥 Novo jogo com grande desconto!', {
+          body: `${game.title} agora por apenas $${game.salePrice} (desconto de ${Math.round(game.savings)}%)!`,
           icon: game.thumb
         });
       });
